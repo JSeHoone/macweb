@@ -9,6 +9,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def index(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+    print(request.FILES)
     return render(request, "index.html" )
 
 # def drag_drop(request):

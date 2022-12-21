@@ -22,14 +22,15 @@
 <body>
   <!-- <form method = "POST" enctype="multipart/form-data">  -->
   <!-- <form method ="POST" action="after" enctype="multipart/form-data">  -->
-  <div class="drag-area" draggable="true">
-    <div class="icon""><i class="fas fa-cloud-upload-alt"></i></div>
-    <header>Drag & Drop to Upload File</header>
-    <span>OR</span>
-    <button>Browse File</button>
-    <input type="file" name='myfile' hidden>
-  </div>
-  <!-- </form>  -->
+  <form method="POST" enctype="multipart/form-data">
+    <div class="drag-area" draggable="true">
+      <div class="icon""><i class="fas fa-cloud-upload-alt"></i></div>
+      <header>Drag & Drop to Upload File</header>
+      <span>OR</span>
+      <button>Browse File</button>
+      <input type="file" name='myfile' hidden>
+    </div>
+  </form> 
 
 
   <script src="{% static 'js/script.js' %}"></script>
