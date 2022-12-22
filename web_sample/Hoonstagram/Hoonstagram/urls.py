@@ -22,6 +22,6 @@ from .views import Sub
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Sub.as_view() ), # 아무것도 없이 들어왔을 경우에는 뭘 할 것인가? 즉 "127.0.0.1:8000" 일 때 보여지는 template
+    path('main/',Sub.as_view() ), # 아무것도 없이 들어왔을 경우에는 뭘 할 것인가? 즉 "127.0.0.1:8000" 일 때 보여지는 template
 
 ]

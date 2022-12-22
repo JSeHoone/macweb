@@ -23,13 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5rcr44d@1+l^&bf)2$5h040xe&9=4gd^05y5%)s8)og1)^jl_t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+## Debug모드가 뭐냐면? 
+# DEBUG = False를 한다면 page not found라는 것이 안뜬다. 
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+## 여기에 어떤 앱들을 만들어서 넣었는지 넣어주면 사용자가 어떤 앱을 추가했구나 알 수 있다.
+## 여기에 넣는게 중요한 이유는 // 나중에 model을 migration할때 여기에 app이 없으면 자동으로 migration이 안된다. 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'templates.hoonstagram'
+    'templates.hoonstagram', 
+    'content', # condtemt앱을 추가해준거 
+    'user'
 ]
 
 MIDDLEWARE = [
