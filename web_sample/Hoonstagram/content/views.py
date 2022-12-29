@@ -8,5 +8,6 @@ from .models import Feed
 class Main(APIView):
     def get(self, request):
         feed_list =  Feed.objects.all() # Feed의 객체들의 모든 것을 가져오겠다. // Quary Set // Select * From content_Feed;
-        print(feed_list)
-        return render(request, "Hoonstagram/main.html")
+    
+        
+        return render(request, "Hoonstagram/main.html", context=dict(feeds=feed_list))
